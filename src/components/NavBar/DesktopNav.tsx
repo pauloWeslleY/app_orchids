@@ -1,6 +1,7 @@
 import { memo } from "react";
 import {
    Box,
+   Button,
    Link,
    Popover,
    PopoverContent,
@@ -12,9 +13,13 @@ import {
 import { DesktopSubNav, NAV_ITEMS } from "./index";
 
 export const DesktopNav = () => {
-   const linkColor = useColorModeValue("gray.600", "gray.200");
-   const linkHoverColor = useColorModeValue("gray.800", "white");
-   const popoverContentBgColor = useColorModeValue("white", "gray.800");
+   const DESKTOP_NAV_BG_COLORS_HOVER = useColorModeValue(
+      "pink.100",
+      "purple.100"
+   );
+   const DESKTOP_NAV_COLORS_HOVER = useColorModeValue("pink.900", "purple.900");
+   const DESKTOP_NAV_COLORS = useColorModeValue("purple.200", "whiteAlpha.900");
+   const popoverContentBgColor = useColorModeValue("whiteAlpha.900", "pink.10");
 
    return (
       <Stack direction={"row"} spacing={4}>
@@ -22,19 +27,22 @@ export const DesktopNav = () => {
             <Box key={navItem.label}>
                <Popover trigger={"hover"} placement={"bottom-start"}>
                   <PopoverTrigger>
-                     <Link
+                     <Button
                         p={2}
-                        href={navItem.href ?? "#"}
-                        fontSize={"sm"}
+                        fontSize={"1rem"}
                         fontWeight={500}
-                        color={linkColor}
+                        bg={"transparent"}
+                        color={DESKTOP_NAV_COLORS}
+                        transition={"all 0.4s ease-in"}
                         _hover={{
-                           textDecoration: "none",
-                           color: linkHoverColor,
+                           transform: " scale(107%)",
+                           boxShadow: "xl",
+                           bg: DESKTOP_NAV_BG_COLORS_HOVER,
+                           color: DESKTOP_NAV_COLORS_HOVER,
                         }}
                      >
                         {navItem.label}
-                     </Link>
+                     </Button>
                   </PopoverTrigger>
 
                   {navItem.children && (

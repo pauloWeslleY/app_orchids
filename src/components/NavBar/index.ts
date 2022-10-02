@@ -8,6 +8,9 @@ import DesktopSubNav from "./DesktopSubNav";
 import { NAV_ITEMS } from "../../data/DataNavItem";
 import { NavItem } from "../../types/NavItem";
 
+import { ButtonToggleMode } from "../BtnToggleMode";
+
+
 
 export {
    NavBar,
@@ -15,7 +18,8 @@ export {
    DesktopSubNav,
    MobileNav,
    MobileNavItem,
-   NAV_ITEMS
+   NAV_ITEMS,
+   ButtonToggleMode
 };
 
 export type { NavItem };

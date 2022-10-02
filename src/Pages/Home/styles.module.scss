@@ -1,17 +1,57 @@
-.hero__parallax {
-   background: var(--white-10);
-   transform: translate(-50%, -50%);
-   position: absolute;
-   left: 50%;
-   top: 50%;
-   padding: 20px;
+.parallax__container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   // margin-top: 5rem;
+   height: 60vh;
+   width: 100%;
+   position: relative;
+   overflow: hidden;
+   background-position: 50% center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
 
-   h2 {
-      font-size: 3.5rem;
-      font-weight: 500;
+   h1 {
       color: var(--pink-10);
-      letter-spacing: -0.2rem;
+      text-align: center;
+      font-size: 4rem;
+      font-weight: 400;
+      z-index: 50;
 
-      text-shadow: -2px 4px 1px rgb(0, 0, 0, 0.7);
+      text-shadow: #000 1px 0 10px;
    }
+
+   &:after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 8;
+      background: -moz-linear-gradient(
+         to bottom,
+         rgba(0, 0, 0, 0) 0,
+         rgba(0, 0, 0, 0) 40%,
+         #000 100%
+      );
+      background: -webkit-linear-gradient(
+         to bottom,
+         rgba(0, 0, 0, 0) 0,
+         rgba(0, 0, 0, 0) 40%,
+         #000 100%
+      );
+      background: linear-gradient(
+         to bottom,
+         rgba(0, 0, 0, 0) 0,
+         rgba(0, 0, 0, 0) 40%,
+         #000 100%
+      );
+   }
+}
+
+.parallax_one {
+   background-image: url(../image/bg_header.jpg);
 }

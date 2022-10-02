@@ -11,18 +11,18 @@ export function BannerParallax() {
          <Parallax
             bgImage={image4}
             strength={200}
-            renderLayer={(precentage) => (
+            renderLayer={(percentage) => (
                <div
                   style={{
                      position: "absolute",
                      width: "100px",
                      height: "100px",
                      borderRadius: "50%",
-                     background: `rgba(155, 79, 79, ${precentage + 1})`,
+                     background: "rgba(155, 79, 79, .4)",
                      left: "50%",
                      top: "50%",
                      transform: `translate(-50%, -50%) scale(${
-                        precentage * 5
+                        percentage * 5
                      })`,
                   }}
                ></div>

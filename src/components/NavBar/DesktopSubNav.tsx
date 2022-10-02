@@ -20,13 +20,13 @@ export const DesktopSubNav = ({ label, href }: NavItem) => {
          display={"block"}
          p={2}
          rounded={"md"}
-         _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
+         _hover={{ bg: useColorModeValue("pink.100", "purple.100") }}
       >
          <Stack direction={"row"} align={"center"}>
             <Box>
                <Text
                   transition={"all .3s ease"}
-                  _groupHover={{ color: "pink.400" }}
+                  _groupHover={{ color: "pink.900" }}
                   fontWeight={500}
                >
                   {label}

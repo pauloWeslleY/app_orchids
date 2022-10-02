@@ -1,3 +1,3 @@
-import Detach from "./Destach";
+import Detach from "./Detach";
 
 export { Detach };

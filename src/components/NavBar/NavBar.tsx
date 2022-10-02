@@ -1,18 +1,20 @@
 import { memo } from "react";
 import {
+   Container,
    Box,
    Flex,
    Text,
-   IconButton,
    Stack,
    Collapse,
+   IconButton,
+   Icon,
+   Avatar,
    useColorModeValue,
-   useBreakpointValue,
    useDisclosure,
-   Container,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { MobileNav, DesktopNav } from "./index";
+import { GiFlowerPot } from "react-icons/gi";
+import { MobileNav, DesktopNav, ButtonToggleMode } from "./index";
 
 export function NavBar() {
    const { isOpen, onToggle } = useDisclosure();
@@ -21,8 +23,6 @@ export function NavBar() {
       <Box bg={useColorModeValue("white", "pink.10")}>
          <Container maxW={"container.xl"}>
             <Flex
-               bg={useColorModeValue("white", "pink.10")}
-               color={useColorModeValue("gray.600", "white")}
                minH={"60px"}
                py={{ base: 2 }}
                px={{ base: 4 }}
@@ -48,31 +48,45 @@ export function NavBar() {
                </Flex>
                <Flex
                   flex={{ base: 1 }}
-                  justify={{ base: "center", md: "start" }}
+                  justify={{ base: "center", md: "space-around" }}
+                  align={"center"}
                >
-                  <Text
-                     textAlign={useBreakpointValue({
-                        base: "center",
-                        md: "left",
-                     })}
-                     fontFamily={"heading"}
-                     color={useColorModeValue("gray.800", "white")}
-                  >
-                     Orchids
-                  </Text>
+                  <Flex alignItems={"center"} gap={3}>
+                     <Icon
+                        as={GiFlowerPot}
+                        w={6}
+                        h={6}
+                        color={useColorModeValue(
+                           "purple.200",
+                           "whiteAlpha.900"
+                        )}
+                     />
+                     <Text
+                        as={"h3"}
+                        fontSize={"1.5rem"}
+                        fontWeight={"regular"}
+                        color={useColorModeValue(
+                           "purple.200",
+                           "whiteAlpha.900"
+                        )}
+                     >
+                        Orquidário
+                     </Text>
+                  </Flex>
                   <Flex display={{ base: "none", md: "flex" }} ml={10}>
                      <DesktopNav />
                   </Flex>
+                  <Stack
+                     flex={{ base: 1, md: 0 }}
+                     justify={"flex-end"}
+                     direction={"row"}
+                     spacing={6}
+                     align={"center"}
+                  >
+                     <ButtonToggleMode />
+                     <Avatar size={"sm"} src={"/favicon/favicon.ico"} />
+                  </Stack>
                </Flex>
-
-               <Stack
-                  flex={{ base: 1, md: 0 }}
-                  justify={"flex-end"}
-                  direction={"row"}
-                  spacing={6}
-               >
-                  <h1>Section</h1>
-               </Stack>
             </Flex>
             <Collapse in={isOpen} animateOpacity>
                <MobileNav />

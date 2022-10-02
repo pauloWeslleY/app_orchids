@@ -7,7 +7,7 @@ export const useColorTheme = () => {
          BG_NAVIGATION: useColorModeValue("whiteAlpha.900", "pink.300"),
          BG_BUTTON_NAVIGATION_HOVER: useColorModeValue("pink.100", "blackAlpha.200"),
 
-         BUTTON_TOGGLE_MODE_COLORS: useColorModeValue("pink.10", "pink.10"),
+         BUTTON_TOGGLE_MODE_COLORS: useColorModeValue("purple.200", "whiteAlpha.900"),
          BACKGROUND_900: "gray.900",
          BACKGROUND_800: 'gray.800',
 

@@ -1,5 +1,6 @@
 
 import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
+import { mode } from '@chakra-ui/theme-tools';
 
 //? Include custom option in here... colors, fonts, etc!!
 const customTheme = {};
@@ -10,6 +11,8 @@ const config: ThemeConfig = {
 }
 
 const colors = {
+   bg_dark: 'var(--bg-dark)',
+   bg_light: 'var(--bg-light)',
    red: {
       40: 'var(--red-40)',
       50: 'var(--red-50)'
@@ -24,6 +27,14 @@ const colors = {
    }
 }
 
+const styles = {
+   global: (props: any) => ({
+      body: {
+         bg: mode('bg_light', 'bg_dark')(props),
+      },
+   }),
+};
+
 const theme = extendTheme({
    customTheme,
    config,
@@ -31,6 +42,7 @@ const theme = extendTheme({
       body: `'Montserrat', sans-serif`,
    },
    colors,
+   styles
 });
 
 export default theme;
