@@ -1,3 +1,6 @@
 import Footer from "./Footer";
+import FooterContent from "./FooterContent";
 
-export { Footer };
+import { isIcons } from "./FooterBtnIcon";
+
+export { Footer, FooterContent, isIcons };

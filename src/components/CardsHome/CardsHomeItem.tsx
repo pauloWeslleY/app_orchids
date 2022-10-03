@@ -1,67 +1,84 @@
 import { memo } from "react";
-import { Box, Flex, Image, chakra } from "@chakra-ui/react";
-import { CardsType } from "./index";
+import { Box, Flex, Image, chakra, useDisclosure } from "@chakra-ui/react";
+import { CardsType, CardsHomeDetails } from "./index";
 
-export function CardsHomeItem({ name, image, price }: CardsType) {
+export function CardsHomeItem({
+   name,
+   image,
+   price,
+   description,
+   cover,
+}: CardsType) {
+   const { isOpen, onOpen, onClose } = useDisclosure();
+
    return (
-      <Flex flexBasis={"100px"} flexGrow={1} flexShrink={1} p={"0.3rem"}>
-         <Box
-            w={"25rem"}
-            h={"auto"}
-            maxW={{
-               base: "100%",
-               md: "100%",
-               lg: "50%",
-               xl: "100%",
-            }}
-            m={3}
-            bg="pink.50"
-            shadow="lg"
-            rounded="lg"
-         >
-            <Box px={4} py={2}>
-               <chakra.h1
-                  color="gray.700"
-                  fontWeight="bold"
-                  fontSize="3xl"
-                  textTransform="uppercase"
-               >
-                  {name}
-               </chakra.h1>
-            </Box>
-
-            <Image h={48} w="full" fit="cover" mt={2} src={image} alt={name} />
-
-            <Flex
-               alignItems="center"
-               justifyContent="space-between"
-               px={4}
-               py={2}
-               roundedBottom="lg"
+      <Flex
+         flexDir={"column"}
+         basis={"330px"}
+         shrink={3}
+         grow={3}
+         m={3}
+         bg={"pink.50"}
+         shadow={"lg"}
+         borderRadius={"2rem"}
+      >
+         <Box px={4} py={2}>
+            <chakra.h1
+               color={"gray.700"}
+               fontWeight={"light"}
+               fontSize={"3xl"}
+               textAlign={"center"}
             >
-               <chakra.h1 color="gray.700" fontWeight="bold" fontSize="lg">
-                  {price}
-               </chakra.h1>
-               <chakra.button
-                  px={2}
-                  py={1}
-                  bg="pink.10"
-                  fontSize="xs"
-                  color="gray.900"
-                  fontWeight="bold"
-                  rounded="lg"
-                  textTransform="uppercase"
-                  _hover={{
-                     bg: "gray.200",
-                  }}
-                  _focus={{
-                     bg: "gray.400",
-                  }}
-               >
-                  More Details
-               </chakra.button>
-            </Flex>
+               {name}
+            </chakra.h1>
          </Box>
+
+         <Image
+            h={"25rem"}
+            w={"full"}
+            fit={"cover"}
+            mt={2}
+            src={image}
+            alt={name}
+         />
+
+         <Flex
+            alignItems={"center"}
+            justifyContent={"space-around"}
+            px={4}
+            py={2}
+            roundedBottom={"lg"}
+         >
+            <chakra.h1 color={"gray.700"} fontWeight={"medium"} fontSize={"lg"}>
+               {price}
+            </chakra.h1>
+            <chakra.button
+               px={2}
+               py={1}
+               bg={"pink.10"}
+               color={"whiteAlpha.900"}
+               fontSize={"xs"}
+               fontWeight={"bold"}
+               textTransform={"uppercase"}
+               transition={"all .5s ease-in-out"}
+               _hover={{
+                  bg: "whiteAlpha.900",
+                  color: "pink.10",
+                  boxShadow: "xl",
+               }}
+               onClick={onOpen}
+            >
+               {"Mais Detalhes"}
+            </chakra.button>
+         </Flex>
+         <CardsHomeDetails
+            title={name}
+            price={price}
+            image={cover}
+            content={description}
+            onClose={onClose}
+            isOpen={isOpen}
+         />
       </Flex>
    );
 }

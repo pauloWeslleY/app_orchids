@@ -3,4 +3,6 @@ export interface CardsType {
    name: string;
    price: string;
    image: any;
+   cover: any;
+   description?: string;
 }

@@ -2,7 +2,6 @@ import { memo } from "react";
 import {
    Box,
    Button,
-   Link,
    Popover,
    PopoverContent,
    PopoverTrigger,
@@ -11,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 
 import { DesktopSubNav, NAV_ITEMS } from "./index";
+import { Link } from "react-router-dom";
 
 export const DesktopNav = () => {
    const DESKTOP_NAV_BG_COLORS_HOVER = useColorModeValue(
@@ -27,22 +27,24 @@ export const DesktopNav = () => {
             <Box key={navItem.label}>
                <Popover trigger={"hover"} placement={"bottom-start"}>
                   <PopoverTrigger>
-                     <Button
-                        p={2}
-                        fontSize={"1rem"}
-                        fontWeight={500}
-                        bg={"transparent"}
-                        color={DESKTOP_NAV_COLORS}
-                        transition={"all 0.4s ease-in"}
-                        _hover={{
-                           transform: " scale(107%)",
-                           boxShadow: "xl",
-                           bg: DESKTOP_NAV_BG_COLORS_HOVER,
-                           color: DESKTOP_NAV_COLORS_HOVER,
-                        }}
-                     >
-                        {navItem.label}
-                     </Button>
+                     <Link to={`/${navItem.link}`}>
+                        <Button
+                           p={2}
+                           fontSize={"1rem"}
+                           fontWeight={500}
+                           bg={"transparent"}
+                           color={DESKTOP_NAV_COLORS}
+                           transition={"all 0.4s ease-in"}
+                           _hover={{
+                              transform: " scale(107%)",
+                              boxShadow: "xl",
+                              bg: DESKTOP_NAV_BG_COLORS_HOVER,
+                              color: DESKTOP_NAV_COLORS_HOVER,
+                           }}
+                        >
+                           {navItem.label}
+                        </Button>
+                     </Link>
                   </PopoverTrigger>
 
                   {navItem.children && (
@@ -59,7 +61,7 @@ export const DesktopNav = () => {
                               <DesktopSubNav
                                  key={child.label}
                                  label={child.label}
-                                 href={child.href}
+                                 link={child.link}
                               />
                            ))}
                         </Stack>

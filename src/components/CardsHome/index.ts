@@ -1,8 +1,11 @@
 import CardsHome from "./CardsHome";
-import { CardsHomeItem } from "./CardsHomeItem";
+import CardsHomeItem from "./CardsHomeItem";
+import CardsHomeDetails from "./CardsHomeDetails";
 
 import { CARDS_HOME } from "../../data/DataCardsHome";
 import { CardsType } from "../../types/CardsType";
 
-export { CardsHomeItem, CardsHome, CARDS_HOME };
+import { IsButton } from "../IsButton";
+
+export { CardsHomeItem, CardsHome, CardsHomeDetails, CARDS_HOME, IsButton };
 export type { CardsType };

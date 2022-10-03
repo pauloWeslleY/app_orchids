@@ -11,30 +11,32 @@ import {
 
 export function Detach() {
    return (
-      <Container maxW={"container.xl"} py={12}>
-         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+      <Container maxW={"5xl"} py={12}>
+         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={7}>
             <Flex flexDir={"column"} justify={"center"}>
-               <Heading color={"gray.700"}>
-                  A digital Product design agency
-                  <Divider
-                     w={"15rem"}
-                     bg={"pink.10"}
-                     p={"0.1rem"}
-                     mt={"0.3rem"}
-                  />
+               <Heading color={"gray.700"} textAlign={"center"}>
+                  Orquídea Pronenaea Crawshayana
                </Heading>
-               <Text color={"gray.500"} fontSize={"lg"}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore
+
+               <Text
+                  as={"p"}
+                  color={"gray.500"}
+                  fontSize={"lg"}
+                  textAlign={"center"}
+               >
+                  Pronenaea Crawshayana, cultivo em toboinha de madeira,
+                  pendurada em local com muita sombra (70%), umidade 60%, adubo
+                  foliar manutenção, quase sem nenhum substrato, um pouquinho de
+                  sfagnum sobre as raízes, flores lindas todo ano.
                </Text>
             </Flex>
-            <Flex>
+            <Flex alignItems={"flex-start"}>
                <Image
-                  rounded={"md"}
                   alt={"feature image"}
                   src={"/image/orchids_tb.jpg"}
                   objectFit={"cover"}
-                  w={"30rem"}
+                  boxSize={"md"}
+                  borderRadius={"3rem"}
                />
             </Flex>
          </SimpleGrid>

@@ -1,13 +1,15 @@
-import { Center, Divider, Flex, Heading } from "@chakra-ui/react";
-
+import { Center, Divider } from "@chakra-ui/react";
 import {
    NavBar,
+   Title,
+   ParallaxBanner,
    CardsHome,
    Detach,
-   ParallaxPage,
-   ParallaxTwo,
+   ParallaxHomeOne,
+   ParallaxHomeTwo,
    Description,
    Describe,
+   Contact,
    Footer,
 } from "./index";
 
@@ -18,64 +20,33 @@ export default function Home() {
       <section>
          <NavBar />
 
-         <section
-            className={`${styles.parallax__container} ${styles.parallax_one}`}
-         >
-            <h1>Orquidário Iara</h1>
-         </section>
-
+         <ParallaxBanner
+            title={"Orquidário Iara"}
+            image={styles.parallax_banner}
+         />
          <Divider w={"100%"} bg={"pink.10"} />
 
-         <Flex
-            flexDir={"column"}
-            align={"center"}
-            justify={"center"}
-            my={"4rem"}
-         >
-            <Heading
-               fontSize={"3.5rem"}
-               fontWeight={"light"}
-               color={"gray.900"}
-            >
-               Orchids
-            </Heading>
-            <Divider w={"15rem"} bg={"pink.10"} p={"0.1rem"} mt={"0.5rem"} />
-         </Flex>
-
+         <Title title="Orquídeas" />
          <CardsHome />
 
          <Center>
             <Divider w={"50rem"} bg={"red.400"} p={"0.1rem"} mt={"0.5rem"} />
          </Center>
-
          <Detach />
 
          <Divider w={"100%"} bg={"pink.10"} />
-         <ParallaxPage />
+         <ParallaxHomeOne title="Nossas cattleyas em plena floração colorindo nosso Orquidário." />
          <Divider w={"100%"} bg={"pink.10"} />
 
-         <Flex
-            flexDir={"column"}
-            align={"center"}
-            justify={"center"}
-            my={"3rem"}
-         >
-            <Heading
-               fontSize={"3.5rem"}
-               fontWeight={"light"}
-               color={"gray.900"}
-            >
-               Description
-            </Heading>
-            <Divider w={"15rem"} bg={"pink.10"} p={"0.1rem"} mt={"0.5rem"} />
-         </Flex>
-
+         <Title title="Sobre" />
          <Description />
          <Describe />
 
          <Divider w={"100%"} bg={"pink.10"} />
-         <ParallaxTwo />
+         <ParallaxHomeTwo />
          <Divider w={"100%"} bg={"pink.10"} />
+
+         <Contact />
 
          <Footer />
       </section>

@@ -22,9 +22,10 @@ export function Describe() {
                fontWeight={600}
                fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
                lineHeight={"110%"}
+               color={"gray.800"}
             >
                Meeting scheduling{" "}
-               <Text as={"span"} color={"purple.400"}>
+               <Text as={"span"} color={"pink.10"}>
                   made easy
                </Text>
             </Heading>
@@ -33,14 +34,13 @@ export function Describe() {
                your meetings and receive smart reminders in appropriate times.
                Read your smart “Daily Agenda” every morning.
             </Text>
-
             <Flex w={"full"} justify={"center"}>
                <Image
-                  rounded={"md"}
                   alt={"feature image"}
                   src={"/image/bg_orchids2.jpg"}
                   objectFit={"cover"}
-                  w={"30rem"}
+                  boxSize={"md"}
+                  borderRadius={"3rem"}
                />
             </Flex>
          </Stack>

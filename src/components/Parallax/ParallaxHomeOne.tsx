@@ -1,15 +1,18 @@
 import { memo } from "react";
 import { Parallax } from "react-parallax";
+import { IMAGE_HOME_ONE } from "./index";
 
 import styles from "./styles.module.scss";
 
-const image4 = "/image/orquidea_bg.jpg";
+interface ParallaxHome {
+   title: string;
+}
 
-export function BannerParallax() {
+export function ParallaxHomeOne({ title }: ParallaxHome) {
    return (
       <section style={{ textAlign: "center" }}>
          <Parallax
-            bgImage={image4}
+            bgImage={IMAGE_HOME_ONE}
             strength={200}
             renderLayer={(percentage) => (
                <div
@@ -30,10 +33,7 @@ export function BannerParallax() {
          >
             <div style={{ height: 500 }}>
                <div className={styles.hero__parallax}>
-                  <h4>
-                     Nossas cattleyas em plena floração colorindo nosso
-                     Orquidário.
-                  </h4>
+                  <h3>{title}</h3>
                </div>
             </div>
          </Parallax>
@@ -41,4 +41,4 @@ export function BannerParallax() {
    );
 }
 
-export default memo(BannerParallax);
+export default memo(ParallaxHomeOne);

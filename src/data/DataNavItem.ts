@@ -2,27 +2,29 @@ import { NavItem } from "../types/NavItem";
 
 export const NAV_ITEMS: Array<NavItem> = [
    {
-      label: "Home"
+      label: "Home",
+      link: "",
    },
    {
       label: "Orchids",
+      link: "orchids",
       children: [
          {
             label: "Types Orchids",
-            href: "#",
+            link: "/orchids",
          },
          {
             label: "Accessories",
-            href: "#",
+            link: "#",
          },
       ],
    },
    {
       label: "About",
-      href: "#",
+      link: "#",
    },
    {
       label: "Contact",
-      href: "#",
+      link: "#",
    },
 ];

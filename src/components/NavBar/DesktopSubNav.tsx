@@ -12,10 +12,10 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 
 import { NavItem } from "./index";
 
-export const DesktopSubNav = ({ label, href }: NavItem) => {
+export const DesktopSubNav = ({ label, link }: NavItem) => {
    return (
       <Link
-         href={href}
+         href={link}
          role={"group"}
          display={"block"}
          p={2}

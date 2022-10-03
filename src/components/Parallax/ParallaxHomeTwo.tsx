@@ -1,18 +1,15 @@
 import { memo } from "react";
 import { Parallax } from "react-parallax";
+import { IMAGE_HOME_TWO } from "./index";
 
-import styles from "./styles.module.scss";
-
-const image4 = "/image/orchids_03.jpg";
-
-export function ParallaxTwo() {
+export function ParallaxHomeTwo() {
    return (
       <section style={{ textAlign: "center" }}>
-         <Parallax blur={4} bgImage={image4} strength={200}>
+         <Parallax blur={4} bgImage={IMAGE_HOME_TWO} strength={200}>
             <div style={{ height: 500 }}></div>
          </Parallax>
       </section>
    );
 }
 
-export default memo(ParallaxTwo);
+export default memo(ParallaxHomeTwo);

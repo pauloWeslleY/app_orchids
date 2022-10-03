@@ -1,3 +1,5 @@
 import Contact from "./Contact";
 
-export { Contact };
+import { Title } from "../Title";
+
+export { Contact, Title };
