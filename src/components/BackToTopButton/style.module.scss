@@ -1,6 +1,6 @@
 .backToTopButton {
    background: var(--pink-10);
-   color: var(--gray-10);
+   color: var(--white-10);
 
    clip-path: circle();
    font-size: 1.5rem;
@@ -23,11 +23,11 @@
 
 @keyframes backToTopAnimation {
    0% {
-      transform: scale(1) rotate(25deg);
-      filter: brightness(40%);
+      transform: scale(1);
+      filter: brightness(70%);
    }
    100% {
-      transform: scale(1.1) rotate(-25deg);
+      transform: scale(1.1);
       filter: brightness(100%);
    }
 }

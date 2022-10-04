@@ -48,6 +48,11 @@ export function FooterBtnIcon({ icon, label, link }: IconProps) {
          isRound={true}
          size={"lg"}
          bg={"transparent"}
+         transition={"all .5s ease-out"}
+         _hover={{
+            bg: "transparent",
+            transform: "translateY(-15px)",
+         }}
          color={"gray.200"}
          aria-label={label}
          icon={icon}
