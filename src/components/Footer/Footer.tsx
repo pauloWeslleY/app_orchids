@@ -7,7 +7,7 @@ import styles from "./styles.module.scss";
 
 export function Footer() {
    return (
-      <Box bg={"pink.10"}>
+      <Box bg={"pink.10"} color={"whiteAlpha.800"}>
          <Stack
             direction={{
                base: "column",
@@ -19,14 +19,12 @@ export function Footer() {
          >
             <FooterContent />
          </Stack>
-         <Divider w="95%" mx="auto" color="#F9FAFB" h="3.5px" />
+         <Divider w={"95%"} mx={"auto"} color={"whiteAlpha.900"} h={"3.5px"} />
          <VStack py={3} align={"center"}>
             <Text
-               textAlign="center"
-               fontSize="smaller"
-               _dark={{
-                  color: "white",
-               }}
+               textAlign={"center"}
+               fontSize={"smaller"}
+               color={"whiteAlpha.800"}
             >
                © Copyright 2022 Orquidário - Todos os Direitos Reservados.{" "}
                <Text

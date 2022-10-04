@@ -24,13 +24,14 @@ import {
 export function MenuAccessories() {
    const MENU = ["Acessórios", "Decorações", "Cachepot", "Vasos", "Adubo"];
    return (
-      <Box bg={"blackAlpha.100"} color={"gray.700"}>
+      <Box>
          <Container maxW={"5xl"}>
             <Tabs
                isFitted
                isLazy={true}
                variant={"solid-rounded"}
                colorScheme={"red"}
+               color={"gray.800"}
             >
                <TabList overflow={"auto"}>
                   {MENU.map((item, index) => (

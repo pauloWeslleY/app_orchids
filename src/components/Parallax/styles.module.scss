@@ -1,5 +1,4 @@
 .hero__parallax {
-   background: var(--white-10);
    transform: translate(-50%, -50%);
    position: absolute;
    left: 50%;
@@ -9,6 +8,7 @@
    h3 {
       font-size: 1.8rem;
       font-weight: 300;
+      color: var(--white-10);
 
       text-shadow: #000 1px 0 10px;
    }

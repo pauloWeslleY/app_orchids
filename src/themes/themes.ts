@@ -42,7 +42,7 @@ const theme = extendTheme({
    customTheme,
    config,
    colors,
-   styles
+   styles,
 });
 
 export default theme;
