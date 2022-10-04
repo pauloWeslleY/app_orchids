@@ -29,7 +29,9 @@ export function Contact() {
                      height={"auto"}
                      color={"gray.800"}
                   >
-                     <Heading>Entre em contato com a gente!</Heading>
+                     <Heading fontWeight={700}>
+                        Entre em contato com a gente!
+                     </Heading>
                      <Box
                         as={"span"}
                         display={"flex"}

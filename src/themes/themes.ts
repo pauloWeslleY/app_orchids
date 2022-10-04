@@ -32,15 +32,15 @@ const styles = {
       body: {
          bg: mode('bg_light', 'bg_dark')(props),
       },
+      fonts: {
+         body: `'Montserrat', sans-serif`,
+      },
    }),
 };
 
 const theme = extendTheme({
    customTheme,
    config,
-   fonts: {
-      body: `'Montserrat', sans-serif`,
-   },
    colors,
    styles
 });
