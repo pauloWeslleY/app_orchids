@@ -5,7 +5,7 @@ import MobileNavItem from "./MobileNavItem";
 import DesktopNav from "./DesktopNav";
 import DesktopSubNav from "./DesktopSubNav";
 
-import { NAV_ITEMS } from "../../data/DataNavItem";
+import { NAV_ITEMS, NAV_MOBILE } from "../../data/DataNavItem";
 import { NavItem } from "../../types/NavItem";
 
 
@@ -17,6 +17,7 @@ export {
    MobileNav,
    MobileNavItem,
    NAV_ITEMS,
+   NAV_MOBILE,
 };
 
 export type { NavItem };

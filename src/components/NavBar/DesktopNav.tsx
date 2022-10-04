@@ -13,13 +13,14 @@ import { DesktopSubNav, NAV_ITEMS } from "./index";
 import { Link } from "react-router-dom";
 
 export const DesktopNav = () => {
-   const DESKTOP_NAV_BG_COLORS_HOVER = useColorModeValue(
-      "pink.100",
-      "purple.100"
-   );
-   const DESKTOP_NAV_COLORS_HOVER = useColorModeValue("pink.900", "purple.900");
-   const DESKTOP_NAV_COLORS = useColorModeValue("purple.200", "whiteAlpha.900");
-   const popoverContentBgColor = useColorModeValue("whiteAlpha.900", "pink.10");
+   const THEME = {
+      COLORS: {
+         DESKTOP_NAV_BG_COLORS_HOVER: "pink.100",
+         DESKTOP_NAV_COLORS_HOVER: "pink.900",
+         DESKTOP_NAV_COLORS: "whiteAlpha.900",
+         POPOVER_CONTENT_BG: "pink.10",
+      },
+   };
 
    return (
       <Stack direction={"row"} spacing={4}>
@@ -33,13 +34,13 @@ export const DesktopNav = () => {
                            fontSize={"1rem"}
                            fontWeight={500}
                            bg={"transparent"}
-                           color={DESKTOP_NAV_COLORS}
+                           color={THEME.COLORS.DESKTOP_NAV_COLORS}
                            transition={"all 0.4s ease-in"}
                            _hover={{
                               transform: " scale(107%)",
                               boxShadow: "xl",
-                              bg: DESKTOP_NAV_BG_COLORS_HOVER,
-                              color: DESKTOP_NAV_COLORS_HOVER,
+                              bg: THEME.COLORS.DESKTOP_NAV_BG_COLORS_HOVER,
+                              color: THEME.COLORS.DESKTOP_NAV_COLORS_HOVER,
                            }}
                         >
                            {navItem.label}
@@ -51,7 +52,7 @@ export const DesktopNav = () => {
                      <PopoverContent
                         border={0}
                         boxShadow={"xl"}
-                        bg={popoverContentBgColor}
+                        bg={THEME.COLORS.POPOVER_CONTENT_BG}
                         p={4}
                         rounded={"xl"}
                         minW={"sm"}

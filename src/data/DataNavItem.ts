@@ -2,29 +2,60 @@ import { NavItem } from "../types/NavItem";
 
 export const NAV_ITEMS: Array<NavItem> = [
    {
-      label: "Home",
+      label: "Inicio",
       link: "",
    },
    {
-      label: "Orchids",
-      link: "orchids",
+      label: "Orquídeas",
+      link: "",
       children: [
          {
-            label: "Types Orchids",
+            label: "Orquídeas",
             link: "/orchids",
          },
          {
-            label: "Accessories",
-            link: "#",
+            label: "Micro Orquídeas",
+            link: "/micro_orchids",
+         },
+         {
+            label: "Acessórios",
+            link: "/accessories",
          },
       ],
    },
    {
-      label: "About",
-      link: "#",
+      label: "Quem Somos",
+      link: "about",
    },
    {
-      label: "Contact",
-      link: "#",
+      label: "Contatos",
+      link: "contact",
+   },
+];
+
+export const NAV_MOBILE: Array<NavItem> = [
+   {
+      label: "Inicio",
+      link: "",
+   },
+   {
+      label: "Orquídeas",
+      link: "orchids",
+   },
+   {
+      label: "Micro Orquídeas",
+      link: "micro_orchids",
+   },
+   {
+      label: "Acessórios",
+      link: "accessories",
+   },
+   {
+      label: "Quem Somos",
+      link: "about",
+   },
+   {
+      label: "Contatos",
+      link: "contact",
    },
 ];

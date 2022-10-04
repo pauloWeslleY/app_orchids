@@ -13,25 +13,22 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 
 import { NavItem } from "./index";
 
-export const MobileNavItem = ({ label, children, href }: NavItem) => {
+export const MobileNavItem = ({ label, children, link }: NavItem) => {
    const { isOpen, onToggle } = useDisclosure();
 
    return (
-      <Stack spacing={4} onClick={children && onToggle}>
+      <Stack align={"center"} spacing={4} onClick={children && onToggle}>
          <Flex
             py={2}
             as={Link}
-            href={href ?? "#"}
+            href={`/${link}`}
             justify={"space-between"}
             align={"center"}
             _hover={{
                textDecoration: "none",
             }}
          >
-            <Text
-               fontWeight={600}
-               color={useColorModeValue("gray.600", "gray.200")}
-            >
+            <Text fontWeight={600} color={"whiteAlpha.800"}>
                {label}
             </Text>
             {children && (
@@ -49,17 +46,10 @@ export const MobileNavItem = ({ label, children, href }: NavItem) => {
             animateOpacity
             style={{ marginTop: "0!important" }}
          >
-            <Stack
-               mt={2}
-               pl={4}
-               borderLeft={1}
-               borderStyle={"solid"}
-               borderColor={useColorModeValue("gray.200", "gray.700")}
-               align={"start"}
-            >
+            <Stack mt={2} pl={4} align={"start"}>
                {children &&
                   children.map((child) => (
-                     <Link key={child.label} py={2} href={child.href}>
+                     <Link key={child.label} py={2} href={child.link}>
                         {child.label}
                      </Link>
                   ))}

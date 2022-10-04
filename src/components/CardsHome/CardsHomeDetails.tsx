@@ -15,8 +15,8 @@ import {
 import { CloseIcon } from "@chakra-ui/icons";
 
 interface CardsHomeDetailsProps {
-   title: string;
-   price: string;
+   title: any;
+   price: any;
    image: any;
    content: any;
    onClose: any;
@@ -68,11 +68,15 @@ export function CardsHomeDetails({
                            aria-label={"Close Button"}
                            icon={<CloseIcon />}
                         />
-                        <Heading>{title}</Heading>
+                        <Heading fontWeight={"bold"}>{title}</Heading>
                      </Box>
-                     <Text>{price}</Text>
+                     <Text as={"span"} fontWeight={500}>
+                        {price}
+                     </Text>
                      <Divider bg={"red.900"} />
-                     <Box>{content}</Box>
+                     <Box as={"p"} fontWeight={500} fontSize={"1.07rem"}>
+                        {content}
+                     </Box>
                   </Flex>
                </Flex>
             </DrawerBody>

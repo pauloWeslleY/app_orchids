@@ -1,20 +1,5 @@
 import { memo } from "react";
-import {
-   Box,
-   Divider,
-   Flex,
-   Heading,
-   HStack,
-   Icon,
-   Image,
-   Link,
-   Stack,
-   Text,
-   VStack,
-} from "@chakra-ui/react";
-import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
-import { FiTwitter } from "react-icons/fi";
-import { BsInstagram } from "react-icons/bs";
+import { Box, Divider, Stack, Text, VStack } from "@chakra-ui/react";
 
 import { FooterContent } from "./index";
 

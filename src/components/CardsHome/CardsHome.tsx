@@ -1,6 +1,7 @@
-import { Center, Container, Flex } from "@chakra-ui/react";
 import { memo } from "react";
+import { Center, Container, Flex } from "@chakra-ui/react";
 import { CardsHomeItem, CARDS_HOME, IsButton } from "./index";
+import { Link } from "react-router-dom";
 
 export function CardsHome() {
    return (
@@ -20,7 +21,9 @@ export function CardsHome() {
             </Flex>
 
             <Center py={"1rem"}>
-               <IsButton title={"Ver Mais"} />
+               <Link to={"/orchids"}>
+                  <IsButton title={"Ver Mais"} />
+               </Link>
             </Center>
          </Container>
       </section>

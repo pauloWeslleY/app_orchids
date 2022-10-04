@@ -1,0 +1,33 @@
+.backToTopButton {
+   background: var(--pink-10);
+   color: var(--gray-10);
+
+   clip-path: circle();
+   font-size: 1.5rem;
+   padding: 0.2rem;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   position: fixed;
+   bottom: 1.25rem;
+   right: 1.25rem;
+   height: 3.125rem;
+   width: 2.5rem;
+
+   z-index: 5;
+
+   animation: backToTopAnimation 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes backToTopAnimation {
+   0% {
+      transform: scale(1) rotate(25deg);
+      filter: brightness(40%);
+   }
+   100% {
+      transform: scale(1.1) rotate(-25deg);
+      filter: brightness(100%);
+   }
+}

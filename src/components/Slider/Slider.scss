@@ -1,0 +1,31 @@
+//! <| === Styles Swiper&Slider === |>
+.swiper {
+   // padding: 1rem;
+
+   .swiper-slide {
+      display: flex;
+      justify-content: center;
+   }
+
+   .swiper-pagination-bullet-active {
+      background-color: var(--gray-30);
+   }
+
+   .swiper-button-next,
+   .swiper-button-prev {
+      color: var(--gray-30);
+   }
+}
+
+//! <| === MediaQuery  === |>
+@media only screen and (max-width: 800px) {
+   // .swiper {
+   //    padding-bottom: 32px;
+   //    padding-top: 32px;
+   // }
+
+   .swiper-button-next,
+   .swiper-button-prev {
+      display: none;
+   }
+}

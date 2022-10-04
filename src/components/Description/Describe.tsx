@@ -24,15 +24,15 @@ export function Describe() {
                lineHeight={"110%"}
                color={"gray.800"}
             >
-               Meeting scheduling{" "}
+               Nosso ORQUIDARIO IARA com suas{" "}
                <Text as={"span"} color={"pink.10"}>
-                  made easy
+                  orquideas cheirosas e coloridas
                </Text>
             </Heading>
             <Text color={"gray.500"} maxW={"3xl"}>
-               Never miss a meeting. Never be late for one too. Keep track of
-               your meetings and receive smart reminders in appropriate times.
-               Read your smart “Daily Agenda” every morning.
+               Restrepia Elegans, cultivo em sombra e muita umidade, substrato
+               sfagnum e casca de arroz carbonizada, vaso plástico, adubo
+               Bokashi.
             </Text>
             <Flex w={"full"} justify={"center"}>
                <Image

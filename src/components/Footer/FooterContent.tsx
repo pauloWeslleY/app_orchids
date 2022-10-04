@@ -1,73 +1,32 @@
 import { memo } from "react";
-import {
-   Box,
-   Container,
-   Flex,
-   Heading,
-   HStack,
-   Link,
-   SimpleGrid,
-} from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 import { isIcons } from "./index";
+import { Link } from "react-router-dom";
 
 export function FooterContent() {
-   return (
-      <section>
-         <Container maxW={"1335px"}>
-            <SimpleGrid columns={{ base: 1, md: 3 }} spacing={3}>
-               <Flex h={"auto"} justify={"center"} direction={"column"} gap={1}>
-                  <Heading textAlign={"center"}>Quem Somos</Heading>
-                  <Box textAlign={"center"}>
-                     Vendemos Orquídeas e Acessórios (materiais para cultivo)
-                     vasos, plaquinhas, substratos, ferramentas, etc. Entregamos
-                     em Casa - Orquídeas Delivery - Construímos seu Orquidário -
-                     Agende uma visita, contatos pelo WhatsApp 12-991415642 -
-                     Lorena - SP - Brasil. Visitas Agendadas para Conhecer nosso
-                     Orquidário Iara
-                  </Box>
-               </Flex>
-               <Flex
-                  align={"center"}
-                  justify={"start"}
-                  direction={"column"}
-                  gap={2}
-                  h={"10rem"}
-               >
-                  <Heading>Menu</Heading>
-                  <Link textTransform="uppercase">Orchids</Link>
-                  <Link textTransform="uppercase">About Us</Link>
-                  <Link textTransform="uppercase">Contact Us</Link>
-               </Flex>
-               <Flex
-                  align={"center"}
-                  justify={"start"}
-                  direction={"column"}
-                  gap={4}
-                  h={"10rem"}
-               >
-                  <Heading>Follow us</Heading>
-                  <Flex gap={1}>{isIcons()}</Flex>
-               </Flex>
-            </SimpleGrid>
-         </Container>
+   const FOOTER_MENU = [
+      {
+         menu: "Orquídeas",
+         path: "orchids",
+      },
+      {
+         menu: "Micro Orquídeas",
+         path: "micro_orchids",
+      },
+      {
+         menu: "Acessórios",
+         path: "accessories",
+      },
+   ];
 
-         {/* <HStack
-            flex={1}
-            alignItems={"center"}
-            justify={"space-around"}
-            fontSize={{
-               base: "12px",
-               md: "16px",
-            }}
-            color="whiteAlpha.900"
-            textAlign={{
-               base: "center",
-               md: "left",
-            }}
-         >
-            <Flex h={"auto"} justify="start" direction="column" gap={1}>
-               <Heading>Quem Somos</Heading>
-               <Box w={"35rem"}>
+   return (
+      <Container maxW={"7xl"}>
+         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={3}>
+            <Flex h={"auto"} justify={"center"} direction={"column"} gap={1}>
+               <Heading fontWeight={"regular"} textAlign={"center"}>
+                  Quem Somos
+               </Heading>
+               <Box textAlign={"center"}>
                   Vendemos Orquídeas e Acessórios (materiais para cultivo)
                   vasos, plaquinhas, substratos, ferramentas, etc. Entregamos em
                   Casa - Orquídeas Delivery - Construímos seu Orquidário -
@@ -76,18 +35,36 @@ export function FooterContent() {
                   Orquidário Iara
                </Box>
             </Flex>
-            <Flex justify="start" direction="column" gap={1} h={"10rem"}>
-               <Heading>Menu</Heading>
-               <Link textTransform="uppercase">Orchids</Link>
-               <Link textTransform="uppercase">About Us</Link>
-               <Link textTransform="uppercase">Contact Us</Link>
+            <Flex
+               align={"center"}
+               justify={"start"}
+               direction={"column"}
+               gap={2}
+               h={"10rem"}
+            >
+               <Heading fontWeight={"regular"}>Menu</Heading>
+               {FOOTER_MENU.map((menu, index) => (
+                  <Link
+                     to={`/${menu.path}`}
+                     style={{ textDecoration: "none" }}
+                     key={index}
+                  >
+                     {menu.menu}
+                  </Link>
+               ))}
             </Flex>
-            <Flex justify="start" direction="column" gap={4} h={"10rem"}>
-               <Heading>Follow us</Heading>
+            <Flex
+               align={"center"}
+               justify={"start"}
+               direction={"column"}
+               gap={4}
+               h={"10rem"}
+            >
+               <Heading fontWeight={"regular"}>Siga nos</Heading>
                <Flex gap={1}>{isIcons()}</Flex>
             </Flex>
-         </HStack> */}
-      </section>
+         </SimpleGrid>
+      </Container>
    );
 }
 

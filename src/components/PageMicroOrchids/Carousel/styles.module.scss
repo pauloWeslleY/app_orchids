@@ -1,0 +1,16 @@
+.carousel__item {
+   animation-name: allContent;
+   animation-duration: 2s;
+   animation-iteration-count: 1.2;
+}
+
+@keyframes allContent {
+   0% {
+      opacity: 0;
+      transform: translate(-20px, 0px);
+   }
+   100% {
+      opacity: 1;
+      transform: translate(0px, 0px);
+   }
+}

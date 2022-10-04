@@ -22,7 +22,7 @@ export function NavBar() {
 
    return (
       <Box bg={"pink.10"}>
-         <Container maxW={"container.xl"}>
+         <Container maxW={"6xl"}>
             <Flex
                minH={"60px"}
                py={{ base: 2 }}

@@ -1,8 +1,9 @@
 export interface CardsType {
    id?: number;
-   name: string;
-   price: string;
+   name?: string;
+   price?: string;
    image: any;
-   cover: any;
+   image2?: any;
+   cover?: any;
    description?: string;
 }

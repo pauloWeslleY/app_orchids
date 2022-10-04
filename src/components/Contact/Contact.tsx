@@ -55,6 +55,13 @@ export function Contact() {
                         leftIcon={<BsWhatsapp />}
                         bg={"green.300"}
                         color={"whiteAlpha.900"}
+                        transition={"all 0.4s ease-in-out"}
+                        _hover={{
+                           bg: "whiteAlpha.700",
+                           color: "green.300",
+                           transform: "scale(110%)",
+                        }}
+                        onClick={() => window.open("tel:+55 12 991415642")}
                      >
                         WhatsApp
                      </Button>
