@@ -1,13 +1,5 @@
 import { memo } from "react";
-import {
-   Box,
-   Flex,
-   Icon,
-   Link,
-   Stack,
-   Text,
-   useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Flex, Icon, Link, Stack, Text } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 
 import { NavItem } from "./index";
@@ -20,13 +12,13 @@ export const DesktopSubNav = ({ label, link }: NavItem) => {
          display={"block"}
          p={2}
          rounded={"md"}
-         _hover={{ bg: useColorModeValue("pink.100", "purple.100") }}
+         _hover={{ bg: "pink.100" }}
       >
          <Stack direction={"row"} align={"center"}>
             <Box>
                <Text
                   transition={"all .3s ease"}
-                  _groupHover={{ color: "pink.900" }}
+                  _groupHover={{ color: "red.400" }}
                   fontWeight={500}
                >
                   {label}
@@ -41,7 +33,7 @@ export const DesktopSubNav = ({ label, link }: NavItem) => {
                align={"center"}
                flex={1}
             >
-               <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
+               <Icon color={"red.400"} w={5} h={5} as={ChevronRightIcon} />
             </Flex>
          </Stack>
       </Link>

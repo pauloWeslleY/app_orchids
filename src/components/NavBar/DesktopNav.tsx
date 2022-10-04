@@ -6,7 +6,6 @@ import {
    PopoverContent,
    PopoverTrigger,
    Stack,
-   useColorModeValue,
 } from "@chakra-ui/react";
 
 import { DesktopSubNav, NAV_ITEMS } from "./index";

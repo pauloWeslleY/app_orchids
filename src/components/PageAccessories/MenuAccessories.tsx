@@ -30,7 +30,7 @@ export function MenuAccessories() {
                isFitted
                isLazy={true}
                variant={"solid-rounded"}
-               colorScheme={"red"}
+               colorScheme={"pink"}
                color={"gray.800"}
             >
                <TabList overflow={"auto"}>

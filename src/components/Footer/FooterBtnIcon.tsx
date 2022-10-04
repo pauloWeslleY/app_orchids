@@ -46,8 +46,8 @@ export function FooterBtnIcon({ icon, label, link }: IconProps) {
    return (
       <IconButton
          isRound={true}
-         variant={"ghost"}
          size={"lg"}
+         bg={"transparent"}
          color={"gray.200"}
          aria-label={label}
          icon={icon}
