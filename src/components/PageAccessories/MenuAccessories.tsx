@@ -29,7 +29,7 @@ export function MenuAccessories() {
             <Tabs
                isFitted
                isLazy={true}
-               variant={"solid-rounded"}
+               variant={"soft-rounded"}
                colorScheme={"pink"}
                color={"gray.800"}
             >

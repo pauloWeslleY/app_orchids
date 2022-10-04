@@ -16,7 +16,7 @@ export const DesktopNav = () => {
       COLORS: {
          DESKTOP_NAV_BG_COLORS_HOVER: "pink.100",
          DESKTOP_NAV_COLORS_HOVER: "pink.900",
-         DESKTOP_NAV_COLORS: "whiteAlpha.900",
+         DESKTOP_NAV_COLORS: "white",
          POPOVER_CONTENT_BG: "pink.10",
       },
    };
