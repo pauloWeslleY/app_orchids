@@ -62,7 +62,13 @@ export function CardsHomeDetails({
                   >
                      <Box display={"flex"} alignItems={"center"} gap={3}>
                         <IconButton
-                           variant={"ghost"}
+                           bg={"transparent"}
+                           _hover={{
+                              bg: "transparent",
+                           }}
+                           _active={{
+                              bg: "transparent",
+                           }}
                            color={"gray.800"}
                            onClick={onClose}
                            aria-label={"Close Button"}
