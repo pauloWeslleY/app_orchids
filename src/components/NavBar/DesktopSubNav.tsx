@@ -18,7 +18,7 @@ export const DesktopSubNav = ({ label, link }: NavItem) => {
             <Box>
                <Text
                   transition={"all .3s ease"}
-                  _groupHover={{ color: "red.400" }}
+                  _groupHover={{ color: "red.700" }}
                   fontWeight={500}
                >
                   {label}
@@ -33,7 +33,7 @@ export const DesktopSubNav = ({ label, link }: NavItem) => {
                align={"center"}
                flex={1}
             >
-               <Icon color={"red.400"} w={5} h={5} as={ChevronRightIcon} />
+               <Icon color={"red.700"} w={5} h={5} as={ChevronRightIcon} />
             </Flex>
          </Stack>
       </Link>
