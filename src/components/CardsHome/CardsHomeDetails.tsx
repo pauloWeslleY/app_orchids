@@ -74,13 +74,15 @@ export function CardsHomeDetails({
                            aria-label={"Close Button"}
                            icon={<CloseIcon />}
                         />
-                        <Heading fontWeight={"bold"}>{title}</Heading>
+                        <Heading fontFamily={"body"} fontWeight={"bold"}>
+                           {title}
+                        </Heading>
                      </Box>
-                     <Text as={"span"} fontWeight={500}>
+                     <Text fontFamily={"body"} as={"span"} fontWeight={500}>
                         {price}
                      </Text>
                      <Divider bg={"red.900"} />
-                     <Box as={"p"} fontWeight={500} fontSize={"1.07rem"}>
+                     <Box as={"p"} fontWeight={500} fontSize={"1.4rem"}>
                         {content}
                      </Box>
                   </Flex>
