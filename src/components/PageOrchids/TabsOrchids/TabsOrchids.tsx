@@ -34,7 +34,7 @@ export function TabsOrchids() {
                colorScheme={"pink"}
                defaultIndex={1}
             >
-               <TabList overflow={"auto"}>
+               <TabList overflow={"auto"} p={3}>
                   {MENU_TABS.map((tab) => (
                      <Tab key={tab}>{tab}</Tab>
                   ))}

@@ -48,7 +48,7 @@ export function OrchidsDetachTwo() {
                </Flex>
                <Flex justify={"center"} direction={"column"} p={1} h={"50vh"}>
                   <Heading>Cattleya Durigan</Heading>
-                  <Text>
+                  <Text fontSize={"lg"}>
                      Pão de açúcar ( Durigan x Brabantiae), minhas preferidas,
                      pintalgadas , primeira floração, raízes incontroláveis,
                      cultivo pendurada, vaso plástico, substrato macadâmia e

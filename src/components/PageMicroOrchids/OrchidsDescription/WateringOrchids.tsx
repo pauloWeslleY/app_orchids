@@ -18,7 +18,7 @@ export function WateringOrchids() {
                      <Heading fontWeight={"regular"} textAlign={"left"}>
                         {"Rega"}
                      </Heading>
-                     <Text fontWeight={400} fontSize={"1.04rem"}>
+                     <Text fontWeight={400} fontSize={"lg"}>
                         {
                            "O excesso de água pode matar uma orquídea rapidamente. Nunca deixe pratinhos encharcados de água embaixo de suas orquídeas. Nunca molhe as orquídeas quando as folhas estiverem quentes pela incidência da luz solar, pois o choque térmico pode causar pequenas lesões que servem de porta de entrada para doenças. Molhe pela manhã ou no final da tarde. Borrife as folhas e deixe cair um pouco no vaso, deixando úmido, no verão aumente as regas, no inverno diminua."
                         }

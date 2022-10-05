@@ -31,12 +31,7 @@ export function OrchidsDescription() {
                   gap={3}
                   justify={"flex-start"}
                >
-                  <Box
-                     pt={"3rem"}
-                     as={"p"}
-                     fontWeight={400}
-                     fontSize={"1.04rem"}
-                  >
+                  <Box pt={"3rem"} as={"p"} fontWeight={400} fontSize={"lg"}>
                      {
                         "A orquídea não é uma flor qualquer e exatamente por ser especial que as pessoas acabam se apaixonando e querem cultiva-las, Como é uma flor especial, exige que você dê atenção e cuidado, e ela lhe retribuirá com as mais lindas flores que já viu. A maior parte das orquídeas acaba morrendo por causa de erros bastante simples que cultivadores cometem. Estes erros podem sser evitados facilmente. Precisei estudar muito e conviver mais de 25 anos com as orquídeas para aprender como cultiva-las e continuo aprendendo sempre."
                      }

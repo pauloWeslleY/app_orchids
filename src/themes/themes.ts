@@ -7,7 +7,7 @@ const customTheme = {};
 
 const config: ThemeConfig = {
    initialColorMode: 'light',
-   useSystemColorMode: true
+   useSystemColorMode: false
 }
 
 const colors = {
@@ -32,9 +32,6 @@ const styles = {
       body: {
          bg: mode('bg_light', 'bg_dark')(props),
       },
-      fonts: {
-         body: `'Montserrat', sans-serif`,
-      },
    }),
 };
 
@@ -43,6 +40,9 @@ const theme = extendTheme({
    config,
    colors,
    styles,
+   fonts: {
+      body: `'Quicksand', sans-serif`,
+   },
 });
 
 export default theme;

@@ -66,7 +66,7 @@ export function CardHorizontal({ name, price, image, description }: CardsType) {
             >
                {price}
             </Badge>
-            <chakra.p mt={4} color={"gray.600"}>
+            <chakra.p fontSize={"lg"} mt={4} color={"gray.600"}>
                {description}
             </chakra.p>
          </Flex>

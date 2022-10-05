@@ -5,6 +5,7 @@ import { FiPhone } from "react-icons/fi";
 import { CardContact } from "./index";
 
 export interface PageContactProps {
+   label: string;
    name: string;
    icon: any;
 }
@@ -12,14 +13,17 @@ export interface PageContactProps {
 export function PageContact() {
    const CONTACT: Array<PageContactProps> = [
       {
+         label: "E-mail",
          name: "rosanaorquideas@gmail.com",
          icon: HiOutlineMail,
       },
       {
+         label: "Telefone",
          name: "+55 12 99141-5642",
          icon: FiPhone,
       },
       {
+         label: "Endereço",
          name: "Estrada Municipal Tito Vilela, Lorena SP",
          icon: HiOutlineLocationMarker,
       },
@@ -31,6 +35,7 @@ export function PageContact() {
                {CONTACT.map((contact, index) => (
                   <CardContact
                      key={index}
+                     label={contact.label}
                      name={contact.name}
                      icon={contact.icon}
                   />

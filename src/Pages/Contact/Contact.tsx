@@ -39,12 +39,11 @@ export default function Contact() {
             key={props.id}
             isRound={true}
             size={"5rem"}
-            fontSize={"20rem"}
-            boxSize={"50"}
+            fontSize={"4rem"}
             transition={"all 0.4s ease-in-out"}
             _hover={{
-               color: "pink.400",
-               transform: "scale(110%)",
+               color: "red.500",
+               transform: "scale(112%) translateY(-10px)",
             }}
             color={"pink.10"}
             aria-label={props.label}
@@ -62,7 +61,7 @@ export default function Contact() {
 
          <Title title="Rede Sociais" />
 
-         <Flex py={"3rem"} gap={9} alignItems={"center"} justify={"center"}>
+         <Flex pb={"5rem"} gap={8} alignItems={"center"} justify={"center"}>
             {isIconSocial()}
          </Flex>
 

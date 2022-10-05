@@ -31,6 +31,16 @@ export function NavBar() {
                justifyContent={"space-between"}
             >
                <IconButton
+                  aria-label={"Toggle Navigation"}
+                  isActive={false}
+                  color={"whiteAlpha.900"}
+                  bg={"transparent"}
+                  _hover={{
+                     bg: "transparent",
+                  }}
+                  _active={{
+                     bg: "transparent",
+                  }}
                   display={{ md: "none" }}
                   onClick={onToggle}
                   icon={
@@ -40,8 +50,6 @@ export function NavBar() {
                         <HamburgerIcon w={5} h={5} />
                      )
                   }
-                  variant={"ghost"}
-                  aria-label={"Toggle Navigation"}
                />
                <Flex alignItems={"center"} gap={3} color={"whiteAlpha.900"}>
                   <Icon as={GiFlowerPot} w={6} h={6} />

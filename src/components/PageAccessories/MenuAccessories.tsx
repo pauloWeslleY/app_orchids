@@ -29,11 +29,12 @@ export function MenuAccessories() {
             <Tabs
                isFitted
                isLazy={true}
+               size={"lg"}
                variant={"soft-rounded"}
                colorScheme={"pink"}
                color={"gray.800"}
             >
-               <TabList overflow={"auto"}>
+               <TabList overflow={"auto"} p={3}>
                   {MENU.map((item, index) => (
                      <Tab key={index}>{item}</Tab>
                   ))}

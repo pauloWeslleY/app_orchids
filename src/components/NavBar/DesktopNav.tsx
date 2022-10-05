@@ -17,7 +17,9 @@ export const DesktopNav = () => {
          DESKTOP_NAV_BG_COLORS_HOVER: "pink.100",
          DESKTOP_NAV_COLORS_HOVER: "pink.900",
          DESKTOP_NAV_COLORS: "white",
+
          POPOVER_CONTENT_BG: "pink.10",
+         POPOVER_CONTENT_COLOR: "whiteAlpha.900",
       },
    };
 
@@ -52,9 +54,11 @@ export const DesktopNav = () => {
                         border={0}
                         boxShadow={"xl"}
                         bg={THEME.COLORS.POPOVER_CONTENT_BG}
+                        color={THEME.COLORS.POPOVER_CONTENT_COLOR}
                         p={4}
                         rounded={"xl"}
                         minW={"sm"}
+                        zIndex={4}
                      >
                         <Stack>
                            {navItem.children.map((child) => (

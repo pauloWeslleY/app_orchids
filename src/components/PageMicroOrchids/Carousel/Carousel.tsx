@@ -16,7 +16,7 @@ export function Carousel() {
    };
 
    return (
-      <Box bg={"blackAlpha.300"}>
+      <Box>
          <SliderCarousel settings={settings}>
             {CAROUSEL.map((item) => (
                <Slide key={item.id}>

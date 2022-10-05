@@ -1,4 +1,4 @@
-import { Center, Divider } from "@chakra-ui/react";
+import { Center, Container, Divider } from "@chakra-ui/react";
 import {
    NavBar,
    Title,
@@ -29,9 +29,11 @@ export default function Home() {
          <Title title="Orquídeas" />
          <CardsHome />
 
-         <Center>
-            <Divider w={"50rem"} bg={"red.400"} p={"0.1rem"} mt={"0.5rem"} />
-         </Center>
+         <Container maxW={"5xl"}>
+            <Center>
+               <Divider w={"50rem"} bg={"red.400"} p={"0.05rem"} my={"3rem"} />
+            </Center>
+         </Container>
          <Detach />
 
          <Divider w={"100%"} bg={"pink.10"} />

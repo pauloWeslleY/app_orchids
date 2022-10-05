@@ -1,8 +1,8 @@
 import { memo } from "react";
-import { Heading, Icon, Flex } from "@chakra-ui/react";
+import { Heading, Icon, Flex, Text } from "@chakra-ui/react";
 import { PageContactProps } from "./index";
 
-export function CardContact({ name, icon }: PageContactProps) {
+export function CardContact({ label, name, icon }: PageContactProps) {
    return (
       <Flex
          direction={"column"}
@@ -22,9 +22,18 @@ export function CardContact({ name, icon }: PageContactProps) {
          <Heading
             fontSize={{ base: "smaller", sm: "1.4rem" }}
             fontFamily={"body"}
+            mb={"0.9rem"}
+         >
+            {label}
+         </Heading>
+         <Text
+            as={"span"}
+            fontSize={{ base: "smaller", sm: "1.1rem" }}
+            fontFamily={"body"}
+            fontWeight={500}
          >
             {name}
-         </Heading>
+         </Text>
       </Flex>
    );
 }

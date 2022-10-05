@@ -35,9 +35,11 @@ export default function MicroOrchids() {
             </Flex>
          </Container>
 
-         <Center>
-            <Divider w={"25rem"} bg={"red.400"} p={"0.05rem"} my={"3rem"} />
-         </Center>
+         <Container maxW={"5xl"}>
+            <Center>
+               <Divider w={"25rem"} bg={"red.400"} p={"0.05rem"} my={"3rem"} />
+            </Center>
+         </Container>
 
          <OrchidsDescription />
          <WateringOrchids />

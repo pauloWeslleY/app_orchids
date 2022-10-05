@@ -22,7 +22,7 @@ export function OrchidsDetach() {
                   h={"50vh"}
                >
                   <Heading>Cattleya</Heading>
-                  <Text textAlign={"right"}>
+                  <Text fontSize={"lg"} textAlign={"right"}>
                      As vermelhas, paixão, destaque número um no Orquidário
                      Iara.
                   </Text>

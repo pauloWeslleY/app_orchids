@@ -1,6 +1,6 @@
 import { memo, ReactElement } from "react";
 import { IconButton } from "@chakra-ui/react";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 import { BsInstagram, BsWhatsapp } from "react-icons/bs";
 
 interface IconProps {
@@ -13,7 +13,7 @@ interface IconProps {
 const ICONS: Array<IconProps> = [
    {
       id: 1,
-      icon: <FaFacebookF />,
+      icon: <FaFacebookSquare />,
       label: "Button Facebook",
       link: "https://www.facebook.com/OrquidarioIara-2056369527724296/",
    },
@@ -46,14 +46,14 @@ export function FooterBtnIcon({ icon, label, link }: IconProps) {
    return (
       <IconButton
          isRound={true}
-         size={"lg"}
+         fontSize={"1.5rem"}
+         color={"gray.200"}
          bg={"transparent"}
          transition={"all .5s ease-out"}
          _hover={{
             bg: "transparent",
             transform: "translateY(-15px)",
          }}
-         color={"gray.200"}
          aria-label={label}
          icon={icon}
          onClick={link_for_page}

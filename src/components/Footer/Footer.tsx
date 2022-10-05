@@ -33,21 +33,21 @@ export function Footer() {
                   fontSize={"0.8rem"}
                   textAlign={"center"}
                >
-                  Created by{" "}
+                  Developed by{" "}
                   <chakra.a
-                     textShadow="1px 1px var(--red-40)"
+                     textShadow="1px 1px var(--gray-40)"
                      cursor={"pointer"}
-                     color={"red.100"}
+                     color={"red.500"}
                      onClick={() =>
                         window.open("https://weslleylima.vercel.app")
                      }
                      textDecoration={"none"}
                      transition={"all 0.2s ease-in-out"}
                      _hover={{
-                        color: "red.800",
+                        color: "red.200",
                      }}
                   >
-                     Weslley e Lima
+                     Weslley Lima
                   </chakra.a>
                </Text>
             </Text>

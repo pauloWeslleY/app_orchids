@@ -33,7 +33,7 @@ export function TemperatureOrchids() {
                >
                   <Box>
                      <Heading fontWeight={"regular"}>{"Temperatura"}</Heading>
-                     <Text fontWeight={400} fontSize={"1.04rem"}>
+                     <Text fontWeight={400} fontSize={"lg"}>
                         {
                            "Temperatura todas as orquídea se adapta bem as temperaturas entre 15 e 25 graus centrigados. Existem orquídeas que gostam do frio e outras do calor, devemos sempre cultivar as orquídeas que se alimentem no lugar em que vão ser cultivadas."
                         }

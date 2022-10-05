@@ -34,7 +34,7 @@ export function CardsOrchidsVarieties({
          overflow={"hidden"}
       >
          <Box py={4} px={6}>
-            <chakra.p py={2} color="gray.500">
+            <chakra.p fontSize={"lg"} py={2} color="gray.500">
                {description}
             </chakra.p>
             <Divider bg={"pink.800"} />

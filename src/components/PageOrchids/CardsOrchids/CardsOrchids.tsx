@@ -40,7 +40,7 @@ export function CardsOrchids({
                <Heading
                   mb={"0.08rem"}
                   fontSize={"2xl"}
-                  fontWeight={400}
+                  fontWeight={500}
                   fontFamily={"body"}
                >
                   {name}
@@ -51,7 +51,7 @@ export function CardsOrchids({
                   w={"4rem"}
                   color={"gray.600"}
                   bg={"whiteAlpha.100"}
-                  fontWeight={"500"}
+                  fontWeight={600}
                   fontSize={"1.03rem"}
                >
                   {price}
