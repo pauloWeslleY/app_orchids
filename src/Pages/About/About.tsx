@@ -1,14 +1,15 @@
-import { Footer, NavBar, Title, PageAbout } from "./index";
+import { Title, PageAbout } from "./index";
 
-export default function About() {
+export function About() {
    return (
-      <section>
-         <NavBar />
-         <Title title="Quem Somos" />
+      <main>
+         <header>
+            <Title title="Quem Somos" />
+         </header>
 
-         <PageAbout />
-
-         <Footer />
-      </section>
+         <section>
+            <PageAbout />
+         </section>
+      </main>
    );
 }

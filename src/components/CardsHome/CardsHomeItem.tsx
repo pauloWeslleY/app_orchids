@@ -2,13 +2,8 @@ import { memo } from "react";
 import { Box, Flex, Image, chakra, useDisclosure } from "@chakra-ui/react";
 import { CardsType, CardsHomeDetails } from "./index";
 
-export function CardsHomeItem({
-   name,
-   image,
-   price,
-   description,
-   cover,
-}: CardsType) {
+export function CardsHomeItem(card: CardsType) {
+   const { name, image, price, description, cover } = card;
    const { isOpen, onOpen, onClose } = useDisclosure();
 
    return (

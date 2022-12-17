@@ -9,14 +9,7 @@ export function CardsHome() {
          <Container maxW={"7xl"}>
             <Flex flexWrap={"wrap"}>
                {CARDS_HOME.map((cards) => (
-                  <CardsHomeItem
-                     key={cards.id}
-                     name={cards.name}
-                     image={cards.image}
-                     cover={cards.cover}
-                     price={cards.price}
-                     description={cards.description}
-                  />
+                  <CardsHomeItem key={cards.id} {...cards} />
                ))}
             </Flex>
 

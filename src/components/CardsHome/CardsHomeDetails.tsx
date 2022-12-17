@@ -13,24 +13,11 @@ import {
    IconButton,
 } from "@chakra-ui/react";
 import { CloseIcon } from "@chakra-ui/icons";
+import { CardsHomeDetailsProps } from "./index";
 
-interface CardsHomeDetailsProps {
-   title: any;
-   price: any;
-   image: any;
-   content: any;
-   onClose: any;
-   isOpen: any;
-}
+export function CardsHomeDetails(cards: CardsHomeDetailsProps) {
+   const { title, price, content, image, isOpen, onClose } = cards;
 
-export function CardsHomeDetails({
-   title,
-   price,
-   content,
-   image,
-   isOpen,
-   onClose,
-}: CardsHomeDetailsProps) {
    return (
       <Drawer placement={"bottom"} onClose={onClose} isOpen={isOpen}>
          <DrawerOverlay />

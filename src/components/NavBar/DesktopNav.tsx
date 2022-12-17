@@ -62,11 +62,7 @@ export const DesktopNav = () => {
                      >
                         <Stack>
                            {navItem.children.map((child) => (
-                              <DesktopSubNav
-                                 key={child.label}
-                                 label={child.label}
-                                 link={child.link}
-                              />
+                              <DesktopSubNav key={child.label} {...child} />
                            ))}
                         </Stack>
                      </PopoverContent>

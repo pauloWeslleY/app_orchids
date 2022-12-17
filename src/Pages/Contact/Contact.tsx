@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { Flex, IconButton } from "@chakra-ui/react";
-import { Footer, NavBar, Title, PageContact } from "./index";
+import { Title, PageContact } from "./index";
 import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 
@@ -32,7 +32,7 @@ const SOCIAL: Array<IconSocialProps> = [
    },
 ];
 
-export default function Contact() {
+export function Contact() {
    const isIconSocial = () =>
       SOCIAL.map((props) => (
          <IconButton
@@ -53,19 +53,20 @@ export default function Contact() {
       ));
 
    return (
-      <section>
-         <NavBar />
-         <Title title="Contatos" />
+      <main>
+         <header>
+            <Title title="Contatos" />
+         </header>
 
-         <PageContact />
+         <section>
+            <PageContact />
 
-         <Title title="Rede Sociais" />
+            <Title title="Rede Sociais" />
 
-         <Flex pb={"5rem"} gap={8} alignItems={"center"} justify={"center"}>
-            {isIconSocial()}
-         </Flex>
-
-         <Footer />
-      </section>
+            <Flex pb={"5rem"} gap={8} alignItems={"center"} justify={"center"}>
+               {isIconSocial()}
+            </Flex>
+         </section>
+      </main>
    );
 }

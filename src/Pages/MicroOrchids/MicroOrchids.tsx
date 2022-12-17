@@ -1,7 +1,5 @@
 import { Center, Container, Divider, Flex } from "@chakra-ui/react";
 import {
-   NavBar,
-   Footer,
    Carousel,
    Title,
    CardsMicroOrchids,
@@ -11,41 +9,43 @@ import {
    TemperatureOrchids,
 } from "./index";
 
-export default function MicroOrchids() {
+export function MicroOrchids() {
    return (
-      <section>
-         <NavBar />
-         <Carousel />
-         <Divider w={"100%"} bg={"purple.800"} p={"0.05rem"} mb={"0.5rem"} />
+      <main>
+         <header>
+            <Carousel />
+         </header>
 
-         <Title title={"Micro Orquídeas"} />
+         <section>
+            <Divider w={"100%"} bg={"purple.800"} p={"0.05rem"} mb={"0.5rem"} />
 
-         <Container maxW={"7xl"}>
-            <Flex wrap={"wrap"}>
-               {MICRO_ORCHIDS.map((card) => (
-                  <CardsMicroOrchids
-                     key={card.id}
-                     name={card.name}
-                     price={card.price}
-                     image={card.image}
-                     cover={card.cover}
-                     description={card.description}
+            <Title title={"Micro Orquídeas"} />
+
+            <Container maxW={"7xl"}>
+               <Flex wrap={"wrap"}>
+                  {MICRO_ORCHIDS.map((card) => (
+                     <CardsMicroOrchids key={card.id} {...card} />
+                  ))}
+               </Flex>
+            </Container>
+         </section>
+
+         <section>
+            <Container maxW={"5xl"}>
+               <Center>
+                  <Divider
+                     w={"25rem"}
+                     bg={"red.400"}
+                     p={"0.05rem"}
+                     my={"3rem"}
                   />
-               ))}
-            </Flex>
-         </Container>
+               </Center>
+            </Container>
 
-         <Container maxW={"5xl"}>
-            <Center>
-               <Divider w={"25rem"} bg={"red.400"} p={"0.05rem"} my={"3rem"} />
-            </Center>
-         </Container>
-
-         <OrchidsDescription />
-         <WateringOrchids />
-         <TemperatureOrchids />
-
-         <Footer />
-      </section>
+            <OrchidsDescription />
+            <WateringOrchids />
+            <TemperatureOrchids />
+         </section>
+      </main>
    );
 }
